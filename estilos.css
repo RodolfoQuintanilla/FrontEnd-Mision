@@ -1,0 +1,171 @@
+header {
+    text-align: left;
+    background-color: rgb(255, 221, 0);
+    margin-bottom: 0px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.back {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url(https://pp.userapi.com/c841122/v841122831/327e/nHt-92F6yc4.jpg) no-repeat top center #efeff1;
+    background-size: cover;
+}
+
+.thx {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+nav a {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #16151b;
+    margin: 0 15px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+}
+
+nav a:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: #16151b;
+    top: 47%;
+    animation: out 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+}
+
+nav a:hover:before {
+    animation: in 0.2s cubic-bezier(1, 0, 0.58, 0.97) 1 both;
+
+}
+
+@keyframes in {
+    0% {
+        width: 0;
+        left: 0;
+        right: auto;
+    }
+
+    100% {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
+
+@keyframes out {
+    0% {
+        width: 100%;
+        left: auto;
+        right: 0;
+    }
+
+    100% {
+        width: 0;
+        left: auto;
+        right: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@for $i from 1 through 5 {
+    nav a:nth-child(#{$i}) {
+        animation:show .2s #{$i*0.1+1}s ease 1 both;
+    }
+}
+
+.uno {
+    width: auto;
+    height: 300px;
+    background-color: #ff7d68;
+    color: #efeff1;
+    flex-wrap: wrap;
+}
+
+.general {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.comentario h1 {
+    font-size: 60px;
+}
+
+.comentario p {
+    font-size: 20px;
+}
+
+.imgPastel {
+    width: 200px;
+    height: 200px;
+}
+
+.dos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.cuadro {
+
+    width: 100px;
+    height: 100px;
+}
+
+.ped {
+    background-color: #ff7d68;
+    color: #efeff1;
+    border-radius: 5px;
+    border: none;
+    width: 100px;
+    height: 50px;
+}
+
+.cuadro img {
+
+    width: 100px;
+    height: 100px;
+}
+
+.tres {
+    padding: 20px;
+    ;
+}
